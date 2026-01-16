@@ -16,6 +16,9 @@ const DEPLOYER_PRIVATE_KEY =
 const ac = (path: string) => `https://${path}.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
 
 const SOLC_COMPILERS = [
+  "0.8.30",
+  "0.8.29",
+  "0.8.28",
   "0.8.27",
   "0.8.25",
   "0.8.24",
@@ -84,8 +87,14 @@ export default defineConfig({
       type: "http",
       chainType: "l1",
       url: configVariable("SEPOLIA_RPC_URL"),
-      accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
+      accounts: [configVariable("SEPOLIA_PRIVATE_KEY")]
     },
+    base: {
+      type: "http",
+      chainType: "op",
+      url: configVariable("BASE_RPC_URL"),
+      accounts: [configVariable("BASE_PRIVATE_KEY")]
+    }
   },
   test: {
     solidity: {

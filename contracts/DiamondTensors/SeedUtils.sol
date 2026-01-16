@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+pragma solidity ^0.8.30;
 
 library SeedUtils {
     error RankMismatch();
     error IndexOutOfBounds();
     error InvalidShape();
     error SizeOverflow();
-
     /// @notice Deterministic tensor id, stable across chains if inputs match.
     function tensorId(address owner, bytes32 seed, uint64 nonce)
         internal

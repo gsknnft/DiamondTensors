@@ -21,6 +21,8 @@ type BenchRow = {
   status: BenchStatus;
 };
 
+export default async function main() {
+  //@ts-expect-error
 const { viem } = await network.connect();
 const publicClient = await viem.getPublicClient();
 const [walletClient] = await viem.getWalletClients();
@@ -742,3 +744,9 @@ await writeFile(csvPath, `${csvLines.join("\n")}\n`);
 await writeFile(mdPath, `${mdLines.join("\n")}\n`);
 
 console.log(`Wrote benchmark output to ${csvPath} and ${mdPath}`);
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
