@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Build artifacts
+dist/
+build/
+
+# Logs
+*.log
+logs/
+*.tmp
+
+# dotenv environment files
+.env
+.env.*
+
+# Coverage and test output
+coverage/
+nyc_output/
+jest-result.json
+junit.xml
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# EVM specific cache/artifacts
+artifacts/
+cache/

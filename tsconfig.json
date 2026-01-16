@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+    "module": "NodeNext",
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": false,
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "composite": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "ts-node": {
+    "project": "evm/tsconfig.json"
+  },
+  "include": ["./src"],
+  "exclude": [
+    "dist",
+    "./main/lib/library"
+  ]
+}
